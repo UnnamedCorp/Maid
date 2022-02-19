@@ -1,2 +1,3 @@
 # Maid
-A hassle-free Roblox library to manage object cleanup!
+
+Originally created for the RoStrap project, the Maid instance makes cleanup management easy for Roblox games. Add `Connection`, `Function`, `Instance` or even other `Maid` objects and clean them all up with an easy, efficient and hassle-free call!
