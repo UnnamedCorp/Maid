@@ -4,7 +4,7 @@
 local Maid = {}
 Maid.__index = Maid
 
-type MaidTask = (nil) | Instance | RBXScriptConnection | Maid
+type MaidTask = () -> () | Instance | RBXScriptConnection | Maid
 type Maid = typeof(setmetatable({_Tasks = {}:: {MaidTask}}, Maid))
 
 --// Functions
