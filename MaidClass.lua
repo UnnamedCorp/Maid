@@ -17,6 +17,13 @@ function Maid:GiveTask(Task: MaidTask)
 	table.insert(self._Tasks, Task)
 end
 
+function Maid:LinkToInstance(Object: Instance)
+	self:GiveTask(Object)
+	self:GiveTask(Object.Destroying:Connect(function()
+		self:DoCleaning()
+	end))
+end
+
 function Maid:DoCleaning()
 	local Tasks = self._Tasks
 	self._Tasks = {}
